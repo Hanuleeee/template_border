@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TemplateApp</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= stylesheet_link_tag     params[:controller], media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+   <body class="expand-data panel-data">
+    <%= render 'shared/nav' %>
+    <%= render 'shared/sidebar' %>
+    <%= yield %>   
+    <%= render 'shared/footer' %>
+    <%= yield 'javascript_content' %>  <!-- 현재 컨트롤러 action에 해당하는 html.erb 파일을 찾아간다. 위치를 찾아간다. -->
+  </body>
+</html>
