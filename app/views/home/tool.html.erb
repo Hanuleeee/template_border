@@ -1,0 +1,130 @@
+<div class="option-panel">
+    <span class="panel-btn">
+      <i class="fa ion-android-settings fa-spin"></i>
+    </span>
+    <div class="color-panel">
+      <h4>Text Color</h4>
+      <span class="color1" onclick="setActiveStyleSheet('color1'); return false;">
+        <i></i>
+      </span>
+      <span class="color2" onclick="setActiveStyleSheet('color2'); return false;">
+        <i></i>
+      </span>
+      <span class="color3" onclick="setActiveStyleSheet('color'); return false;">
+        <i></i>
+      </span>
+      <span class="color4" onclick="setActiveStyleSheet('color4'); return false;">
+        <i></i>
+      </span>
+      <span class="color5" onclick="setActiveStyleSheet('color5'); return false;">
+        <i></i>
+      </span>
+    </div>
+  </div>
+  <!-- Options Panel -->
+  <div class="pg-tp">
+    <i class="ion-cube"></i>
+    <div class="pr-tp-inr">
+      <h4>Tabs & Accordians</h4>
+      <span>Management of Tabs & Accordians.</span>
+    </div>
+  </div>
+  <!-- Page Top -->
+
+  <div class="panel-content">
+    <div class="widget pad50-65">
+      <div class="widget-title2">
+        <h4>Tabs Style</h4>
+        <span>This is the Tab Style</span>
+      </div>
+      <div class="tab-styl tab-styl1">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#tab1-1">Tab 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab1-2">Tab 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab1-3">Tab 3</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tab1-1">
+            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor,
+              nibh moles massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan
+              adipiscing risus, li um venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie
+              neque nullam scelerisque neque quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue
+              dolor enim integer luctus, nisi suscipit gravi putate nisi viverra luctus id leo dictum lorem, inceptos nibh
+              orci.</p>
+            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor,
+              nibh moles massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan
+              adipiscing risus, li um venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie
+              neque nullam scelerisque neque quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue
+              dolor enim integer luctus, nisi suscipit gravi putate nisi viverra luctus id leo dictum lorem, inceptos nibh
+              orci.</p>
+          </div>
+          <div class="tab-pane fade" id="tab1-2">
+            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor,
+              nibh moles massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan
+              adipiscing risus, li um venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie
+              neque nullam scelerisque neque quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue
+              dolor enim integer luctus, nisi suscipit gravi putate nisi viverra luctus id leo dictum lorem, inceptos nibh
+              orci.</p>
+            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor,
+              nibh moles massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan
+              adipiscing risus, li um venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie
+              neque nullam scelerisque neque quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue
+              dolor enim integer luctus, nisi suscipit gravi putate nisi viverra luctus id leo dictum lorem, inceptos nibh
+              orci.</p>
+          </div>
+          <div class="tab-pane fade" id="tab1-3">
+            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor,
+              nibh moles massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan
+              adipiscing risus, li um venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie
+              neque nullam scelerisque neque quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue
+              dolor enim integer luctus, nisi suscipit gravi putate nisi viverra luctus id leo dictum lorem, inceptos nibh
+              orci.</p>
+            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor,
+              nibh moles massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan
+              adipiscing risus, li um venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie
+              neque nullam scelerisque neque quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue
+              dolor enim integer luctus, nisi suscipit gravi putate nisi viverra luctus id leo dictum lorem, inceptos nibh
+              orci.</p>
+          </div>
+        </div>
+      </div>
+
+  <!-- Panel Content -->
+  
+<% content_for 'javascript_content' do %>
+<%= javascript_include_tag params[:controller] %>
+<script type="text/javascript">
+  $(document).ready(function () {
+      'use strict';
+
+      //===== Accordion =====//
+      $('#acordn .acrdn-cnt').hide();
+      $('#acordn h4:first').addClass('active').next().slideDown(500).parent().addClass("activate");
+      $('#acordn h4').on("click", function () {
+        if ($(this).next().is(':hidden')) {
+          $('#acordn h4').removeClass('active').next().slideUp(500).parent().removeClass("activate");
+          $(this).toggleClass('active').next().slideDown(500).parent().toggleClass("activate");
+        }
+      });
+
+      $('#acordn2 .acrdn-cnt').hide();
+      $('#acordn2 h4:first').addClass('active').next().slideDown(500).parent().addClass("activate");
+      $('#acordn2 h4').on("click", function () {
+        if ($(this).next().is(':hidden')) {
+          $('#acordn2 h4').removeClass('active').next().slideUp(500).parent().removeClass("activate");
+          $(this).toggleClass('active').next().slideDown(500).parent().toggleClass("activate");
+        }
+      });
+    });
+</script>
+<script> 
+    console.log("content_for");
+</script>
+
+<% end %>
